@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * puts2 - prints every other character of a string.
+ * puts_half - prints half of the string passed.
  *
  * @str: the string to print.
  *
  * Return: no return.
  */
-void puts2(char *str)
+void puts_half(char *str)
 {
 	int count = 0, n;
 
@@ -15,10 +15,11 @@ void puts2(char *str)
 	{
 		count++;
 	}
-	n = (count - 1) / 2;
+	n = (count) / 2;
 	while (*(str + n) != '\0')
 	{
 		_putchar(*(str + n));
 		n++;
 	}
+	_putchar('\n');
 }
