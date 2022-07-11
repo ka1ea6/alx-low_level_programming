@@ -13,7 +13,7 @@ void print_rev(char *str)
 
 	for (index = 0; str[index] != '\0'; ++index)
 		;
-	for (; index >= 0; --index)
+	for (--index; index >= 0; --index)
 		_putchar(str[index]);
 	_putchar('\n');
 }
