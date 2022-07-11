@@ -20,5 +20,7 @@ void print_rev(char *str)
 		_putchar(*(str + count));
 		count--;
 	}
-	_putchar('\n');
+	/**
+	 * _putchar('\n');
+	 */
 }
