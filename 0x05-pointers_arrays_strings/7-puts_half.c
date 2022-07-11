@@ -16,7 +16,7 @@ void puts_half(char *str)
 		count++;
 	}
 	if (count % 2)
-		n = ((count) / 2) - 1;
+		n = ((count) / 2) + 1;
 	else
 		n = (count) / 2;
 	while (*(str + n) != '\0')
