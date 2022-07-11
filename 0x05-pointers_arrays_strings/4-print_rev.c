@@ -9,18 +9,11 @@
  */
 void print_rev(char *str)
 {
-	int count = 0;
+	int index;
 
-	while (*(str + count) != '\0')
-	{
-		++count;
-	}
-	while (count >= 0)
-	{
-		_putchar(*(str + count));
-		--count;
-	}
-	/**
-	 * _putchar('\n');
-	 */
+	for (index = 0; str[index] != '\0'; ++index)
+		;
+	for (; index >= 0; --index)
+		_putchar(str[index]);
+	_putchar('\n');
 }
