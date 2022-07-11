@@ -2,20 +2,23 @@
 #include <stdio.h>
 
 /**
- * print_array - prints the array up to the specified index.
+ * _strcpy - copies the second string argument to the first string argument;
  *
- * @a: the array to be printed.
- *@n: the number of elements to print.
- * Return: no return.
+ * @dest: destination array pointer.
+ * @src: source array pointer.
+ * Return: pointer to the destination.
  */
-void print_array(int *a, int n)
+char *_strcpy(char *dest, char *src)
 {
-	int count = 0;
+	int a, b = 0;
 
-	while (count < n)
+	for (a = 0; src[a] != '\0'; ++a)
 	{
-		printf("%d, ", *(a + count));
-		count++;
+		dest[b] = src[a];
+		++b;
 	}
-	printf("\n");
+	dest[b] = '\0';
+
+	return (dest);
+
 }
