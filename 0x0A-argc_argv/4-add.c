@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 
 		for (i = 1; i < argc; i++)
 		{
-			if (isnumber(argv[i]))
+			if (isnum(argv[i]))
 			{
 				printf("Error\n");
 				return (1);
