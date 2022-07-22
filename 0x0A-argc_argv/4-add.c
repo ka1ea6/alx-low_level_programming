@@ -4,8 +4,8 @@
 #include <string.h>
 
 /**
- * isNumber - checks if the passed string is a number
- * @num: string to be checked
+ * isnumber - checks if the passed string is a number
+ * @tocheck: string to be checked
  *
  * Return: 0 if string is a number, 1 otherwise
  */
@@ -18,10 +18,10 @@ int isnumber(char tocheck[])
 	{
 		if (!isdigit(tocheck[i]))
 		{
-			return 1;
+			return (1);
 		}
 	}
-	return 0;
+	return (0);
 }
 
 /**
@@ -29,7 +29,7 @@ int isnumber(char tocheck[])
  *
  * @argc: the number of arguments passed/
  * @argv: the arguments passed
- * return: 0 if all numbers passed 1 otherwise.
+ * Return: 0 if all numbers passed 1 otherwise.
  */
 
 int main(int argc, char *argv[])
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	if (argc == 1)
 	{
 		printf("%d\n", 0);
-		return 1;
+		return (1);
 	}
 
 	for (i = 1; i < argc; i++)
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 		if (isnumber(argv[i]))
 		{
 			printf("Error\n");
-			return 1;
+			return (1);
 		}
 		else
 		{
@@ -55,5 +55,5 @@ int main(int argc, char *argv[])
 		}
 	}
 	printf("%d\n", sum);
-	return 0;
+	return (0);
 }

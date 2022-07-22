@@ -5,7 +5,7 @@
  *
  * @argc: the number of arguments passed
  * @argv: vector containing arguments passsed
- * return: always 0 (Success)
+ * Return: always 0 (Success)
  */
 
 int main(int argc, char *argv[])
@@ -16,5 +16,5 @@ int main(int argc, char *argv[])
 	{
 		printf("%s\n", argv[i]);
 	}
-	return 0;
+	return (0);
 }

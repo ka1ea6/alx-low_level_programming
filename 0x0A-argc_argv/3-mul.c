@@ -6,16 +6,17 @@
  * @argc: number of arguments passed
  * @argv: the arguments passed
  *
- * return: 0 if two numbers are passed else 1
+ * Return: 0 if two numbers are passed else 1
  */
 
 int main(int argc, char *argv[])
 {
 	int mul;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
-		return 1;
+		return (1);
 	}
 	else
 	{
@@ -24,6 +25,6 @@ int main(int argc, char *argv[])
 		printf("%d\n", mul);
 	}
 
-	return 0;
+	return (0);
 }
 
