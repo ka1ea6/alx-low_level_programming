@@ -6,13 +6,19 @@
  *
  * @s: string pointer.
  *
- * Return: the length of the string.
+ * Return: nothing
  */
-int _strlen(char *s)
+void _puts(char *s)
 {
-	int count = 0;
+	int i = 0;
 
-	while (*(s + count) != '\0')
-		count++;
-	return (count);
+	for (i = 0; s[i] >= 0; i++)
+	{
+		if (s[i] == '\0')
+		{
+			_putchar('\n');
+			break;
+		}
+		_putchar(s[i]);
+	}
 }

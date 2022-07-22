@@ -1,8 +1,8 @@
-#ifndef __MAIN_H__
-#define __MAIN_H__
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 int _putchar(char c);
-int _islowre(int c);
+int _islower(int c);
 int _isalpha(int c);
 int _abs(int n);
 int _isupper(int c);
