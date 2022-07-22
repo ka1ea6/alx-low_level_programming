@@ -4,13 +4,13 @@
 #include <string.h>
 
 /**
- * isnumber - checks if the passed string is a number
+ * isnum - checks if the passed string is a number
  * @tocheck: string to be checked
  *
  * Return: 0 if string is a number, 1 otherwise
  */
 
-int isnumber(char tocheck[])
+int isnum(char tocheck[])
 {
 	int i, len = strlen(tocheck);
 
@@ -38,22 +38,24 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("%d\n", 0);
-		return (1);
+		printf("0\n");
 	}
-
-	for (i = 1; i < argc; i++)
+	else
 	{
-		if (isnumber(argv[i]))
+
+		for (i = 1; i < argc; i++)
 		{
-			printf("Error\n");
-			return (1);
+			if (isnumber(argv[i]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			else
+			{
+				sum += atoi(argv[i]);
+			}
 		}
-		else
-		{
-			sum += atoi(argv[i]);
-		}
+		printf("%d\n", sum);
 	}
-	printf("%d\n", sum);
 	return (0);
 }
