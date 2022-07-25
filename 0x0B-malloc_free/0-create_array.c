@@ -16,11 +16,11 @@ char *create_array(unsigned int size, char c)
 	char *malPointer;
 	unsigned int i = 0;
 
-	if (size <= 0)
+	malpointer = (sizeof(c) * size);
+	if (malpointer == NULL)
 	{
 		return (NULL);
 	}
-	malPointer = malloc(sizeof(c) * size);
 	while (i < size)
 	{
 		malPointer[i] = c;
