@@ -16,8 +16,8 @@ char *create_array(unsigned int size, char c)
 	char *malPointer;
 	unsigned int i = 0;
 
-	malpointer = (sizeof(c) * size);
-	if (malpointer == NULL)
+	malPointer = malloc(sizeof(c) * size);
+	if (malPointer == NULL)
 	{
 		return (NULL);
 	}
