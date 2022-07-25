@@ -18,7 +18,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	matPointer = malloc(sizeof(char) * strlen(str));
+	matPointer = malloc(sizeof(char) * (strlen(str) + 1));
 	if (matPointer == NULL)
 	{
 		return (NULL);
