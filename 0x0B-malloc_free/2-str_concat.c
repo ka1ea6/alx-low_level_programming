@@ -15,21 +15,21 @@ char *str_concat(char *s1, char *s2)
 	int i = 0, j = 0;
 	char *malPointer;
 
-	/*if (s1 == NULL)
+	if (s1 == NULL)
 	{
-		*s1 = "";
+		s1[0] = '\0';
 	}
 	if (s2 == NULL)
 	{
-		*s2 = "";
-	}*/
+		s2[0] = '\0';
+	}
 
-	malPointer = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 2));
+	malPointer = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
 	if (malPointer == NULL)
 	{
 		return (NULL);
 	}
-	while (s1[i] !='\0')
+	while (s1[i] != '\0')
 	{
 		malPointer[i] = s1[i];
 		i++;
