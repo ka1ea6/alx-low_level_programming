@@ -8,13 +8,18 @@
  * @size: size of array to be created
  * @c: character used to initialize array
  *
- * Return: pointer to the created array
+ * Return: pointer to the created array if size > 0,
+ * NULL otherwise.
  */
 char *create_array(unsigned int size, char c)
 {
 	char *malPointer;
 	unsigned int i = 0;
 
+	if (size <= 0)
+	{
+		return (NULL);
+	}
 	malPointer = malloc(sizeof(c) * size);
 	while (i < size)
 	{
