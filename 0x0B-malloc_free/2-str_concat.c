@@ -17,11 +17,11 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 	{
-		s1[0] = '\0';
+		s1 = "";
 	}
 	if (s2 == NULL)
 	{
-		s2[0] = '\0';
+		s2 = "";
 	}
 
 	malPointer = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
@@ -34,10 +34,14 @@ char *str_concat(char *s1, char *s2)
 		malPointer[i] = s1[i];
 		i++;
 	}
+	if (i == 0)
+		malPointer[i] = '\0';
 	while (s2[j] != '\0')
 	{
 		malPointer[i + j] = s2[j];
 		j++;
 	}
+	if (j == 0)
+		malPointer[i + j] = '\0';
 	return (malPointer);
 }

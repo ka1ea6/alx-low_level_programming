@@ -18,6 +18,8 @@ int main(void)
 		return (1);
 	}
 	printf("%s\n", s);
+	s = str_concat("hello", NULL);
+	printf("%s\n", s);
 	free(s);
 	return (0);
 }
