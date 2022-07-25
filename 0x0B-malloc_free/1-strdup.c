@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _strdup - returns a pointer ot newly allocated space in memory
@@ -15,14 +16,16 @@ char *_strdup(char *str)
 	int i = 0;
 	char *matPointer;
 
-	matPointer = matalloc(sizeof(char) * (sizeof(*str)/sizeof(char)));
+	if (str == NULL)
+		return (NULL);
+	matPointer = malloc(sizeof(char) * strlen(str));
 	if (matPointer == NULL)
 	{
 		return (NULL);
 	}
-	while((*str + i) != '\0')
+	while (str[i] != '\0')
 	{
-		(*matPointer + i) = (*str + i);
+		matPointer[i] = str[i];
 		i++;
 	}
 	return (matPointer);
