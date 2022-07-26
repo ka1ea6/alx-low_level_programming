@@ -13,9 +13,9 @@
 int **alloc_grid(int width, int height)
 {
 	int **matPointer;
-	int i, j;
+	int i, j
 
-	matPointer = malloc(sizeof(int*) * width);
+	matPointer = malloc(sizeof(int *) * width);
 	for (i = 0; i < width; i++)
 	{
 		matPointer[i] = malloc(sizeof(int) * height);
@@ -31,4 +31,3 @@ int **alloc_grid(int width, int height)
 	}
 	return (matPointer);
 }
-	
