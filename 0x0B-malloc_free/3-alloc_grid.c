@@ -13,7 +13,7 @@
 int **alloc_grid(int width, int height)
 {
 	int **matPointer;
-	int i, j
+	int i, j;
 
 	matPointer = malloc(sizeof(int *) * width);
 	for (i = 0; i < width; i++)
