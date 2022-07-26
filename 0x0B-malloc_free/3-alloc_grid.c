@@ -18,13 +18,13 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 	
-	matPointer = malloc(sizeof(int *) * width);
+	matPointer = malloc(sizeof(int *) * height);
 	if (matPointer == NULL)
 		return (NULL);
 
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
-		matPointer[i] = malloc(sizeof(int) * height);
+		matPointer[i] = malloc(sizeof(int) * width);
 		if (matPointer[i] == NULL)
 		{
 			while (i >= 0)
@@ -35,7 +35,7 @@ int **alloc_grid(int width, int height)
 			free(matPointer);
 			return (NULL);
 		}
-		for (j = 0; j < height; j++)
+		for (j = 0; j < width; j++)
 			matPointer[i][j] = 0;
 	}
 	return (matPointer);
