@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * calc_cents - calculates the minimum number of cents
+ * main - calculates the minimum number of cents
  * required to make change for a given amount of money
  *
  * @argc: the number of arguments passed
@@ -10,7 +10,7 @@
  * Return: 1 if incorrect arguments passed 0 otherwise.
  */
 
-int calc_cents(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int cents, count = 0;
 
@@ -25,39 +25,33 @@ int calc_cents(int argc, char *argv[])
 		printf("%d\n", 0);
 		return (1);
 	}
-	while (cents >= 0)
+	while (cents > 0)
 	{
 		if (cents >= 25)
 		{
-			count++;
+			count += 1;
 			cents -= 25;
-			break;
 		}
 		else if (cents >= 10)
 		{
-			count++;
+			count += 1;
 			cents -= 10;
-			break;
 		}
 		else if (cents >= 5)
 		{
-			count++;
+			count += 1;
 			cents -= 5;
-			break;
 		}
 		else if (cents >= 2)
 		{
-			count++;
+			count += 1;
 			cents -= 2;
-			break;
 		}
 		else if (cents >= 1)
 		{
-			count++;
+			count += 1;
 			cents -= 1;
-			break;
 		}
-		break;
 	}
 	printf("%d\n", count);
 	return (0);
