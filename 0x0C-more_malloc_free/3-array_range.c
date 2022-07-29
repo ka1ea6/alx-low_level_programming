@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * array_range: returns pointer to an int array that
+ * array_range - returns pointer to an int array that
  * includs values from min to max in asending order.
  *
  * @min: minimum number
  * @max: maximum nubmer
- * Return: pointer to an array of integers if valid, 
+ * Return: pointer to an array of integers if valid,
  * NULL otherwise.
  */
 
