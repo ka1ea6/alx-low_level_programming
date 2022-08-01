@@ -30,13 +30,15 @@ int _strlen(char *word)
 char *_strcpy(char *dest, char *src)
 {
 	int i;
+
 	for (i = 0; src[i]; i++)
 		dest[i] = src[i];
 	dest[i] = '\0';
 
 	return (dest);
 }
-/* new_dog - creates a new dog struct
+/**
+ * new_dog - creates a new dog struct
  *
  * @name: name of new dog struct
  * @age: age of new dog struct
@@ -62,7 +64,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			free(newDog);
 			return (NULL);
 		}
-	
+
 	newDog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 	if ((*newDog).owner == NULL)
 		{

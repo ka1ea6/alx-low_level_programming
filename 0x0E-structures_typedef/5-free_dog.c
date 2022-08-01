@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * free_dog - function that frees the space 
+ * free_dog - function that frees the space
  * allocated for the dog struct
  *
  * @d: pointer to the dog struct
