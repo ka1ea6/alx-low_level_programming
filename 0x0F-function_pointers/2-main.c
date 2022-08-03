@@ -10,11 +10,11 @@
 
 int is_98(int elem)
 {
-	return (98 == elem);
+	return (elem == 98);
 }
 
 /**
- * is_strictly_positive - chekc if a number is greater 
+ * is_strictly_positive - chekc if a number is greater
  * than 0.
  * @elem: the integer to check
  *

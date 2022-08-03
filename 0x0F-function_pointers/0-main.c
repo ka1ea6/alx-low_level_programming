@@ -39,7 +39,7 @@ void print_name_uppercase(char *name)
 /**
  * main - check the code
  *
- * Retrun: Always 0.
+ * Return: Always 0.
  */
 int main(void)
 {
