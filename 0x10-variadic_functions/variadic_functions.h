@@ -1,5 +1,5 @@
 #ifndef _VARIADIC_FUNCTIONS_
-#define _VARIADIC_FUNCIONS_
+#define _VARIADIC_FUNCTIONS_
 
 #include <stdarg.h>
 
@@ -12,7 +12,7 @@ void print_all(const char * const format, ...);
  * struct print - A new struct for defining prints
  *
  * @symbol: symbol representing the data type.
- * @print_func: function pointer to funcion responsible to the 
+ * @print_func: function pointer to funcion responsible to the
  * symbol.
  */
 typedef struct print
