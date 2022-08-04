@@ -6,7 +6,7 @@
 /**
  * print_char - print a char
  *
- * @arg: a list of argument pointing to the
+ * @args: a list of argument pointing to the
  * character to be printed.
  *
  * Return: Nothing
@@ -14,13 +14,14 @@
 void print_char(va_list args)
 {
 	char print = va_arg(args, int);
+
 	printf("%c", print);
 }
 
 /**
  * print_int - prints an integer.
  *
- * @arg: a list of argument pointing to the character
+ * @args: a list of argument pointing to the character
  * to be printed.
  *
  * Return: Nothing.
@@ -28,13 +29,14 @@ void print_char(va_list args)
 void print_int(va_list args)
 {
 	int print = va_arg(args, int);
+
 	printf("%d", print);
 }
 
 /**
  * print_float - prints a float
  *
- * @arg: list of arguments pointing to the float
+ * @args: list of arguments pointing to the float
  * to be printed.
  *
  * Return: Nothing.
@@ -43,6 +45,7 @@ void print_int(va_list args)
 void print_float(va_list args)
 {
 	float print = va_arg(args, double);
+
 	printf("%f", print);
 }
 
