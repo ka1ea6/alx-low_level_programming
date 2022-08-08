@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * _strlen - takes a pointer to a sting as input and returns the length
- * of the string.
+ * _puts - prints the char passed to the function
  *
  * @s: string pointer.
  *
