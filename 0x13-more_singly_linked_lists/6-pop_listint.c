@@ -1,5 +1,12 @@
 #include "lists.h"
 
+/**
+ * pop_listint - removes the head of a linked list.
+ *
+ * @head: pointer to head node.
+ * Return: value held in head node.
+ */
+
 int pop_listint(listint_t **head)
 {
 	listint_t *curr;
