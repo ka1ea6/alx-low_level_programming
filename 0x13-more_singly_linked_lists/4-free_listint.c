@@ -13,6 +13,7 @@ void free_listint(listint_t *head)
 	if (!head)
 		return;
 
+	curr = head;
 	while (head->next)
 	{
 		curr = head->next;
@@ -20,6 +21,4 @@ void free_listint(listint_t *head)
 		head = curr;
 	}
 	free(curr);
-	if (head)
-		free(head);
 }
