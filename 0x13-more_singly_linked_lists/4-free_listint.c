@@ -20,4 +20,6 @@ void free_listint(listint_t *head)
 		head = curr;
 	}
 	free(curr);
+	if (head)
+		free(head);
 }
