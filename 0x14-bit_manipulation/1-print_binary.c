@@ -50,7 +50,6 @@ void print_binary(unsigned long int n)
 	}
 }
 
-#include <unistd.h>
 
 /**
  * _putchar - writes the character c to stdout
