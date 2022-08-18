@@ -10,7 +10,7 @@
  *
  * Return: number of bits to flip to get @m from @n
 */
-unsigned int flip_bits(unsigned long int n, unsigned long int n)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int diff_bits = 0;
 	unsigned long int diff;
