@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * binary_to_uint - converts binary in string to 
+ * binary_to_uint - converts binary in string to
  * unsigned int.
  *
  * @b: pointer to string.
- * Returns: integer representation of the binary
+ * Return: integer representation of the binary
  * if successful, 0 otherwise.
  */
 
@@ -14,14 +14,14 @@ unsigned int binary_to_uint(const char *b)
 	int count, res, length;
 
 	if (!b)
-		return 0;
+		return (0);
 	count = 0;
-	while(b[count] != '\0')
+	while (b[count] != '\0')
 	{
 		if (b[count] == '0' || b[count] == '1')
 			count++;
 		else
-			return 0;
+			return (0);
 	}
 	length = count;
 	res = 0;
@@ -52,10 +52,10 @@ unsigned int binary_to_uint(const char *b)
  * Return: the result of multiplying the base a times.
  */
 
-int power (int base, int a)
+int power(int base, int a)
 {
 	if (a != 0)
 		return (base * power(base, a - 1));
 	else
-		return 1;
-}	
+		return (1);
+}
