@@ -1,6 +1,5 @@
 #include "main.h"
-
-
+#include <unistd.h>
 /**
  * _length - find the length of @n
  *
@@ -39,19 +38,28 @@ void print_binary(unsigned long int n)
 
 	if (length > 0) /*create mask based on length of number*/
 		mask <<= length; /*shift mask to the left by length*/
-	#ifdef DEBUG
-	debug_1(n, length, mask);
-	#endif
 
 	while (mask > 0)
 	{
-
 		if (n & mask) /*if n & mask == 1 print 1*/
 			_putchar('1');
 		else /*else if n & mask == 0 print 0*/
 			_putchar('0');
 
 		mask >>= 1; /*shift mask to the right by 1*/
-
 	}
+}
+
+#include <unistd.h>
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
