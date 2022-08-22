@@ -1,5 +1,13 @@
 #include "main.h"
-
+/**
+ * main - copies the contents of the file pointed
+ * by the first argument upon executiont to the second
+ * argument.
+ *
+ * @argc: the number of arguments passed.
+ * @argv: list of arguments passed upon execution.
+ * Return: 0 if successful, 1 otherwise.
+ */
 int main(int argc, char **argv)
 {
 	int file_from, file_to;

@@ -1,5 +1,14 @@
 #include "main.h"
 
+/**
+ * read_textfile - reads the file specified by filename
+ *
+ * @filename: name of the file to be read.
+ * @letters: the length of the content to be read.
+ *
+ * Returns: length of read content if successfull 0 otherwise
+ */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file;
@@ -11,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 
 	file = open(filename, O_RDONLY);
-	
+
 	if (file == -1)
 		return (0);
 

@@ -1,5 +1,15 @@
 #include "main.h"
 
+/**
+ * create_file - creates a file specified by filename
+ *
+ * @filename: the name of the file to be created
+ * @text_content: the content to be written to the created
+ * file.
+ *
+ * Returns: the size of the written content if successful,
+ * -1 otherwise.
+ */
 int create_file(const char *filename, char *text_content)
 {
 	int file;
