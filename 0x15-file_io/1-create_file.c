@@ -7,7 +7,7 @@
  * @text_content: the content to be written to the created
  * file.
  *
- * Returns: the size of the written content if successful,
+ * Return: the size of the written content if successful,
  * -1 otherwise.
  */
 int create_file(const char *filename, char *text_content)
@@ -21,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 		text_content = "";
 
 	size = 0;
-	while(text_content[size] != '\0')
+	while (text_content[size] != '\0')
 		size++;
 
 	file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);

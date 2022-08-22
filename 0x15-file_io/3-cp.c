@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	file_to =  open(argv[2],O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	file_to =  open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 
 	if (file_to == -1)
 	{
@@ -55,7 +55,7 @@ int main(int argc, char **argv)
 	}
 
 	from_close = close(file_from);
-	
+
 	if (from_close == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d", file_from);
