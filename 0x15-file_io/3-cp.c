@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 
 	if (file_to == -1)
 	{
-		dprintf(2, "Error: Can't write to %s", argv[2]);
+		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 
@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 	{
 		if (from_size == -1)
 		{
-			dprintf(2, "Error: Can't read from file %s", argv[1]);
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 
@@ -49,7 +49,7 @@ int main(int argc, char **argv)
 
 		if (to_size == -1)
 		{
-			dprintf(2, "Error: Can't write to %s", argv[2]);
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
@@ -58,7 +58,7 @@ int main(int argc, char **argv)
 
 	if (from_close == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d", file_from);
+		dprintf(2, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
 
@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 
 	if (to_close == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d", file_to);
+		dprintf(2, "Error: Can't close fd %d\n", file_to);
 		exit(100);
 	}
 
