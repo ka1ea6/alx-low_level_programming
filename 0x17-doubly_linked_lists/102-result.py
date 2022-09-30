@@ -5,6 +5,7 @@ def largest_palindrome():
         for y in reversed(range(100, 1000)):
             if is_palindrome(x * y):
                 if (x * y) > largest:
+                    print(x, y, x*y)
                     largest = x * y
     return largest
 def is_palindrome(num):
