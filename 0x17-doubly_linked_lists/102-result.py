@@ -3,8 +3,10 @@ def largest_palindrome():
     largest = 0;
     for x in reversed(range(100, 1000)):
         for y in reversed(range(100, 1000)):
+            print(x, y, x * y)
             if is_palindrome(x * y):
                 largest = x * y
+                print(x, y)
                 return largest
 
 def is_palindrome(num):
