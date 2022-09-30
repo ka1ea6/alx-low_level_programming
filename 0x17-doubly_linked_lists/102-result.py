@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def largest_palindrome():
     largest = 0;
-    for x in reversed(range(1000, 10000)):
-        for y in reversed(range(1000, 10000)):
+    for x in reversed(range(100, 1000)):
+        for y in reversed(range(100, 1000)):
             if is_palindrome(x * y):
                 largest = x * y
                 return largest
