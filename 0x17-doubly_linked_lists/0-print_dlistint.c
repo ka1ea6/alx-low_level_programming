@@ -13,12 +13,12 @@ size_t print_dlistint(const dlistint_t *h)
 
 	size = 0;
 
-	while(h)
+	while (h)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
 		size++;
 	}
 
-	return size;
+	return (size);
 }
