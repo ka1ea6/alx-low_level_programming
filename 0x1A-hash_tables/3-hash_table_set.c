@@ -53,7 +53,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	while (temp->next && strcmp(temp->key, key) != 0)
 		temp = temp->next;
-	
+
 	if (strcmp(temp->key, key) == 0)
 	{
 		temp->value = strdup(value);
@@ -62,7 +62,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 	temp->next = new;
-	
+
 	free(temp);
 	return (1);
 }
