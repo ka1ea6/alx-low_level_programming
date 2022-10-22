@@ -38,6 +38,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	else if (strcmp(ht->array[index]->key, key) == 0)
 	{
+		if (ht->array[index]->next)
+			new->next = ht->array[index]->next;
 		ht->array[index] = new;
 		return (1);
 	}
@@ -51,14 +53,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	temp = ht->array[index];
 
-	while (temp->next && strcmp(temp->key, key) != 0)
-		temp = temp->next;
-
-	if (strcmp(temp->key, key) == 0)
+	while (temp->next)
 	{
-		temp->value = strdup(value);
-		free(new);
-		return (0);
+		if (strcmp(temp->key, key) == 0)
+		{
+			temp->value = strdup(value);
+			free(new);
+			return (1);
+		}
+		temp = temp->next;
 	}
 
 	temp->next = new;
