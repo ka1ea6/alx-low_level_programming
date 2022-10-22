@@ -38,9 +38,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	else if (strcmp(ht->array[index]->key, key) == 0)
 	{
-		if (ht->array[index]->next)
-			new->next = ht->array[index]->next;
-		ht->array[index] = new;
+		free(ht->array[index]->value);
+		ht->array[index]->value = new->value;
+		free(new);
 		return (1);
 	}
 
