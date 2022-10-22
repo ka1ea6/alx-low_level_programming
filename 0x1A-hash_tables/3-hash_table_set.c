@@ -39,10 +39,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(new);
 		return (0);
 	}
-	
+
 	temp = ht->array[index];
 
-	while(temp->next)
+	while (temp->next)
 		temp = temp->next;
 
 	temp->next = new;
