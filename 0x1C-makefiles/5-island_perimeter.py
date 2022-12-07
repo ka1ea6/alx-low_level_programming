@@ -17,16 +17,12 @@ def check_neighbors(grid, row, col):
     '''Returns the number of ones surrounding the given
     row and col'''
     neighbors = 0
-    if row > 0:
-        if grid[row - 1][col] == 1:
-            neighbors += 1
-    if row < len(grid) - 1:
-        if grid[row + 1][col] == 1:
-            neighbors += 1
-    if col > 0:
-        if grid[row][col - 1] == 1:
-            neighbors += 1
-    if col < len(grid[row]) - 1:
-        if grid[row][col + 1] == 1:
-            neighbors += 1
+    if row > 0 and grid[row - 1][col] == 1:
+        neighbors += 1
+    if row < len(grid) - 1 and grid[row + 1][col] == 1:
+        neighbors += 1
+    if col > 0 and grid[row][col - 1] == 1:
+        neighbors += 1
+    if col < len(grid[row]) - 1 and grid[row][col + 1] == 1:
+        neighbors += 1
     return neighbors
