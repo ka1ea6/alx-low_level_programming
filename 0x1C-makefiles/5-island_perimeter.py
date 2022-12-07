@@ -1,4 +1,4 @@
-#!/usr/bin/dev python3
+#!/usr/bin/python3
 '''Module defining a function for calculating a perimeter given\
 a grid '''
 
