@@ -6,13 +6,15 @@ RM = -rm -f
 
 .phony: all clean oclean fclean re
 
-all: re
-
-re: fclean $(OBJ)
+all: $(OBJ)
 	-$(CC) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) *~ $(NAME)
+
 oclean:
 	$(RM) $(OBJ)
+
 fclean: clean oclean
+
+re: fclean all
