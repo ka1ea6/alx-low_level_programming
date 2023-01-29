@@ -63,7 +63,7 @@ void print_int_array(int *array, size_t size, size_t lower, size_t higher)
 		if (count >= lower && count < higher)
 			printf("%d, ", array[count]);
 		else if (count == higher)
-			printf("%d", array[count]);
+			printf("%d ", array[count]);
 		else if (count > higher)
 			break;
 	}
